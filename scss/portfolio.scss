@@ -30,12 +30,10 @@ span {
 }
 
 .menu__list a{
+    font-weight: 500;
     font-size: 14px;
     color: #212121;
     text-decoration: none;
-}
-
-.header a{
     margin-right: 50px;
 }
 
@@ -53,7 +51,8 @@ span {
     gap: 0 30px;
 }
 
-.header__contacts a{
+.header__contacts a {
+    font-weight: 500;
     font-size: 14px;
     color: #757575;
     text-decoration: none;
@@ -126,11 +125,8 @@ span {
     margin-bottom: 95px;  
 }
 
-.filter__group--item__title {
-    width: 370px;  
-}
-
 .filter__group--item {
+    width: 370px;
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
     box-shadow: 0px 1px 1px #000000;
@@ -138,9 +134,36 @@ span {
     box-shadow: 1px 4px 6px #000000;
 }
 
+.filter__group--item__img {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter__group--item__img:hover {
+    .filter__group--item__text {
+        bottom: 0;
+        visibility: visible;
+        
+    }
+}
+
 .filter__group--item img{
     width: 100%;
     height: 294px;
+}
+
+.filter__group--item__text {
+    position: absolute;
+    width: 100%;
+    height: 294px;
+    bottom: -100%;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    padding: 65px 20px;
+    background: rgba(33, 150, 243, 0.9);
+    color: #FFFFFF;
+    transition: 0.4s;
 }
 
 
@@ -159,24 +182,99 @@ span {
    padding-left: 20px;
 }
 
+.team__item--social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.team__item--social__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+}
+
+.team__item--social__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+use {
+    fill: #AFB1B8; 
+}
+
+.team__item--social__icon:hover use {
+    fill: #ffffff;
+    cursor: pointer;                        
+}
+
+.team__item--social__icon:hover {
+    border-radius: 50%;
+    background: #2196F3;
+    cursor: pointer;  
+}
+
 .footer {
     background-color: #2F303A;
     height: 252px;
-    justify-content: space-between;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    padding: 50px 0 30px 0;
+}
+
+.footer__contact {
+    margin-right: 30px;
 }
 
 .footer__logo {
     font-size: 26px;
     font-weight: bold;
     color: #FFFFFF;
-    padding: 50px 0 30px 0;
+    padding: 0 0 30px 0;
 }
 
 .footer__addres--item {
     padding-bottom: 16px;
+    color: #757575;
+}
+
+.footer__addres--item:first-child {
     color: #FFFFFF;
 }
 
 .footer__addres--item:last-child {
     padding-bottom: 0px;
+}
+
+.team__item--social--footer {
+    display: flex;
+    flex-direction: column;   
+}
+
+.team__item--social--block {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.team__item--social--title {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.team__item--social__icon--footer {
+    border: 1px solid #AFB1B8;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .1);
+    margin-right: 10px;
+}
+
+.team__item--social__icon--footer use {
+    fill: #FFFFFF;
 }
